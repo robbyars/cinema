@@ -24,13 +24,7 @@ func main() {
 
 func InitiateRouter() {
 	router := gin.Default()
-	//router.Use(cors.Default())
-	router.Use(cors.New(cors.Config{
-		AllowOrigins:     []string{"https://cinema-production-7150.up.railway.app"},     // Ganti dengan URL frontend yang sesuai
-		AllowMethods:     []string{"GET", "POST", "PUT", "DELETE"},                      // Metode HTTP yang diizinkan
-		AllowHeaders:     []string{"Origin", "Authorization", "Content-Type", "Accept"}, // Header yang diizinkan
-		AllowCredentials: true,                                                          // Izinkan pengiriman cookies atau header Authorization
-	}))
+	router.Use(cors.Default())
 
 	routers.CustInitiator(router)
 	routers.Cinema_hallInitiator(router)
