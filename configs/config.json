@@ -8,11 +8,11 @@
   "migration": {
     "db": {
       "postgres": {
-        "db_host": "localhost",
+        "db_host": "postgres.railway.internal",
         "db_port": 5432,
-        "db_name": "cinema-api",
+        "db_name": "railway",
         "db_user": "postgres",
-        "db_password": "1234",
+        "db_password": "FjuWwmGbKDIcDkPcmaVEDfDdfloaUPPQ",
         "db_engine": "postgres"
       }
     }

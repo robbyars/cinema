@@ -5,6 +5,7 @@ import (
 	"cinema/databases/connection"
 	"cinema/databases/migration"
 	"cinema/routers"
+	"os"
 
 	"github.com/gin-gonic/gin"
 )
@@ -29,5 +30,6 @@ func InitiateRouter() {
 	routers.ShowtimeInitiator(router)
 	routers.BookingInitiator(router)
 
-	router.Run(":8080")
+	// router.Run(":8080")
+	router.Run(":" + os.Getenv("PORT"))
 }
